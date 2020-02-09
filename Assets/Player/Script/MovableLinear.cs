@@ -21,7 +21,7 @@ public class MovableLinear : MonoBehaviour, Move
         /*         var vAxis = Input.GetAxis("Vertical"); */
         var hAxis = Input.GetAxis("Horizontal");
         /*     moveRb.AddForce(Vector3.right * hAxis * speed, ForceMode.Acceleration); */
-        moveRb.AddForce(transform.forward * hAxis * speed);
+        moveRb.AddForce(transform.forward * hAxis * speed, ForceMode.Force);
         /*   transform.Rotate(Vector3.up * hAxis); */
     }
 }

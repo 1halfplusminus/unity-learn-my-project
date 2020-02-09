@@ -24,7 +24,7 @@ public class Movable : MonoBehaviour, Move
         }
         var vAxis = Input.GetAxis("Vertical");
         var hAxis = Input.GetAxis("Horizontal");
-        moveRb.AddForce(transform.forward * vAxis * speed, ForceMode.Acceleration);
+        moveRb.AddForce(transform.forward * vAxis * speed);
         transform.Rotate(Vector3.up * hAxis);
     }
 }

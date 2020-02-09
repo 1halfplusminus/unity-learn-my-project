@@ -7,15 +7,15 @@ public class Jumpable : MonoBehaviour
     Rigidbody rb;
 
     public float force = 10f;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
-
     public void Jump()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && enabled)
         {
             Debug.Log("On Jump");
             rb.AddForce(Vector3.up * force, ForceMode.Impulse);

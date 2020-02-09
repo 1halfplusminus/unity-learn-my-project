@@ -2,11 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface Move
-{
-    void Move();
-}
-public class Movable : MonoBehaviour, Move
+public class MovableLinear : MonoBehaviour, Move
 {
     Rigidbody moveRb;
 
@@ -22,9 +18,10 @@ public class Movable : MonoBehaviour, Move
         {
             return;
         }
-        var vAxis = Input.GetAxis("Vertical");
+        /*         var vAxis = Input.GetAxis("Vertical"); */
         var hAxis = Input.GetAxis("Horizontal");
-        moveRb.AddForce(transform.forward * vAxis * speed, ForceMode.Acceleration);
-        transform.Rotate(Vector3.up * hAxis);
+        /*     moveRb.AddForce(Vector3.right * hAxis * speed, ForceMode.Acceleration); */
+        moveRb.AddForce(transform.forward * hAxis * speed);
+        /*   transform.Rotate(Vector3.up * hAxis); */
     }
 }

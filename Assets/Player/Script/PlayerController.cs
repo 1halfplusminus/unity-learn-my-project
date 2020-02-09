@@ -5,13 +5,13 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     Groudable groudable;
-    Movable movable;
+    Move movable;
     Jumpable jumpable;
     // Start is called before the first frame update
     void Start()
     {
         groudable = GetComponent<Groudable>();
-        movable = GetComponent<Movable>();
+        movable = GetComponent<Move>();
         jumpable = GetComponent<Jumpable>();
     }
 
